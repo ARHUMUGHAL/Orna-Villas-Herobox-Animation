@@ -20,13 +20,13 @@ body{
     position: relative;
     overflow: hidden;
 }
-.herobox img{
+.herobox img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-    opacity: 80%;
     position: absolute;
+    clip-path: inset(100%);
 }
 .navbar{
     margin-top: 20px;
@@ -38,6 +38,7 @@ body{
     align-items: center;
     justify-content: space-between;
     padding: 0px 50px;
+    opacity: 0%;
 }
 ul.left-navlinks{
     display: flex;
@@ -88,6 +89,7 @@ ul.left-navlinks li a{
     align-items: center;
     justify-content: space-between;
     padding: 0px 50px;
+    opacity: 0%;
 }
 .navbar2 ul{
     width: 300px;
@@ -106,11 +108,16 @@ ul.left-navlinks li a{
     position: absolute;
     color: white;
     font-size: 80px;
-    width: 300px;
+    width: 420px;
+    height: 160px;
     font-weight: 400;
     line-height: 70px;
     top: 32%;
-    left: 50px;
+    left: 150px;
+    overflow: hidden;
+}
+.herobox h1.main-heading span{
+    display: inline-block;
 }
 .users{
     width: 300px;
@@ -157,6 +164,7 @@ ul.left-navlinks li a{
     top: 60%;
     justify-content: center;
     left: 50px;
+    opacity: 0%;
 }
 .member p{
     color: white;
@@ -164,6 +172,7 @@ ul.left-navlinks li a{
 .herobox p.description{
     position: absolute;
     bottom: 8%;
+    opacity: 0%;
     left: 50px;
     color: rgba(255, 255, 255, 0.396);
     width: 400px;
@@ -185,6 +194,7 @@ a.right-btn{
     position: absolute;
     top: 50%;
     right: 50px;
+    opacity: 0%;
     border: 1px solid white;
     transition: .3s linear;
 }
@@ -197,15 +207,20 @@ h1.secondary-heading{
     color: white;
     position: absolute;
     top: 60%;
-    right: 50px;
+    right: 150px;
     font-size: 100px;
     font-weight: 400;
+    overflow: hidden;
+}
+.herobox h1.secondary-heading span{
+    display: inline-block;
 }
 .contact{
     width: 300px;
     height: 60px;
     position: absolute;
-    bottom: 8%;
+    bottom: 5%;
+    opacity: 0%;
     right: 50px;
     display: flex;
     align-items: center;
