@@ -1,106 +1,93 @@
-const h1MainHeading = document.querySelector('h1.main-heading')
+const h1MainHeading = document.querySelector('.main-heading')
+const h1MainHeadingText = h1MainHeading.textContent.split('')
 
-const h1MainText = h1MainHeading.textContent.split('')
+var h1MainLetter = ''
 
-let h1MainLetters = ''
-h1MainText.forEach((elem)=>{
-    h1MainLetters += `<span>${elem}</span>`
+h1MainHeadingText.forEach(function(elem){
+    h1MainLetter += `<span>${elem}</span>`
 })
 
-h1MainHeading.innerHTML = h1MainLetters
+h1MainHeading.innerHTML = h1MainLetter
 
 
-const h1SecondaryHeading = document.querySelector('h1.secondary-heading')
 
-const h1SecondaryText = h1SecondaryHeading.textContent.split('')
+const h1SecondHeading = document.querySelector('.secondary-heading')
+const h1SecondHeadingText = h1SecondHeading.textContent.split('')
 
-let h1SecondaryLetters = ''
-h1SecondaryText.forEach((elem)=>{
-    h1SecondaryLetters += `<span>${elem}</span>`
+var h1SecondLetter = ''
+
+h1SecondHeadingText.forEach(function(elem){
+    h1SecondLetter += `<span>${elem}</span>`
 })
 
-h1SecondaryHeading.innerHTML = h1SecondaryLetters
+h1SecondHeading.innerHTML = h1SecondLetter
 
 
-// -------------------- Gsap Animation Start
+var tl = gsap.timeline();
 
-var tl = gsap.timeline()
 
-tl.to('.herobox img',{
-    clipPath : 'inset(30%)',
-    duration : 1
+tl.from('.herobox h1.main-heading span',{
+    y : '350%',
+    duration : 1,
+    stagger : .050
 },'a')
 
-tl.from('h1.main-heading span',{
-    y : '200%',
-    duration : .6,
-    stagger : 0.040
-},'a')
 
-tl.from('h1.secondary-heading span',{
-    y : '200%',
-    duration : .6,
-    stagger : 0.040
+tl.from('.herobox h1.secondary-heading span',{
+    y : '350%',
+    duration : 1,
+    stagger : .050
 },'a')
 
 tl.to('.herobox img',{
-    clipPath : 'inset(0%)',
-    duration : 1
+    clipPath: 'inset(30%)',
+    duration : 1,
+},'a')
+
+
+tl.to('.herobox h1.main-heading',{
+    x : '-150px',
+    duration : 1,
 },'b')
 
-tl.to('h1.main-heading',{
-x : '-90px',
+
+tl.to('.herobox h1.secondary-heading',{
+    x : '150px',
     duration : 1,
-    ease : Power2
 },'b')
 
-tl.to('h1.secondary-heading',{
-    x : '60px',
+tl.to('.herobox img',{
+    clipPath: 'inset(0%)',
     duration : 1,
-    ease : Power2
 },'b')
+
 
 tl.to('.navbar',{
-    y : '10%',
     opacity : 1,
     duration : 1,
-    ease : Power2
-}, 'c')
+},'c')
 
 tl.to('.navbar2',{
-    y : '10%',
-    delay : 0.15,
     opacity : 1,
     duration : 1,
-    ease : Power2
-}, 'c')
+},'c')
 
 tl.to('.member',{
-    x : '10px',
     opacity : 1,
     duration : 1,
-    ease : Power2
 },'d')
 
 tl.to('.herobox p.description',{
-    y : '20px',
     opacity : 1,
     duration : 1,
-    ease : Power2
 },'d')
 
 tl.to('a.right-btn',{
-    x : '-50px',
     opacity : 1,
     duration : 1,
-    ease : Power2
-})
+},'e')
 
 tl.to('.contact',{
-    y : '-20px',
     opacity : 1,
     duration : 1,
-    ease : Power2
-})
-
-
+},'e')

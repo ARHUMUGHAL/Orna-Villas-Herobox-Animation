@@ -26,7 +26,7 @@ body{
     object-fit: cover;
     object-position: center;
     position: absolute;
-    clip-path: inset(100%);
+    clip-path: inset(50%);
 }
 .navbar{
     margin-top: 20px;
@@ -113,7 +113,7 @@ ul.left-navlinks li a{
     font-weight: 400;
     line-height: 70px;
     top: 32%;
-    left: 150px;
+    left: 200px;
     overflow: hidden;
 }
 .herobox h1.main-heading span{
@@ -172,12 +172,12 @@ ul.left-navlinks li a{
 .herobox p.description{
     position: absolute;
     bottom: 8%;
-    opacity: 0%;
     left: 50px;
     color: rgba(255, 255, 255, 0.396);
     width: 400px;
     transition: .3s linear;
     cursor: pointer;
+    opacity: 0%;
 }
 .herobox p.description:hover{
     color: rgba(255, 255, 255, 0.859);
@@ -194,9 +194,9 @@ a.right-btn{
     position: absolute;
     top: 50%;
     right: 50px;
-    opacity: 0%;
     border: 1px solid white;
     transition: .3s linear;
+    opacity: 0%;
 }
 a.right-btn:hover{
     background-color: transparent;
@@ -207,7 +207,7 @@ h1.secondary-heading{
     color: white;
     position: absolute;
     top: 60%;
-    right: 150px;
+    right: 200px;
     font-size: 100px;
     font-weight: 400;
     overflow: hidden;
@@ -220,11 +220,11 @@ h1.secondary-heading{
     height: 60px;
     position: absolute;
     bottom: 5%;
-    opacity: 0%;
     right: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    opacity: 0%;
 }
 .contact a{
     display: flex;
